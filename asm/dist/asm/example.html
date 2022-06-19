@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>汇编示例 | ASM</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="ASM教程">
+    
+    <link rel="preload" href="/asm/dist/assets/css/0.styles.bcf31e2a.css" as="style"><link rel="preload" href="/asm/dist/assets/js/app.48ba16dc.js" as="script"><link rel="preload" href="/asm/dist/assets/js/2.c8a9966a.js" as="script"><link rel="preload" href="/asm/dist/assets/js/11.25fa1964.js" as="script"><link rel="prefetch" href="/asm/dist/assets/js/10.9367eac2.js"><link rel="prefetch" href="/asm/dist/assets/js/12.663481d2.js"><link rel="prefetch" href="/asm/dist/assets/js/13.2473ea55.js"><link rel="prefetch" href="/asm/dist/assets/js/14.97314123.js"><link rel="prefetch" href="/asm/dist/assets/js/15.55afd9f3.js"><link rel="prefetch" href="/asm/dist/assets/js/16.d698a219.js"><link rel="prefetch" href="/asm/dist/assets/js/17.aed1e81d.js"><link rel="prefetch" href="/asm/dist/assets/js/18.f16e4843.js"><link rel="prefetch" href="/asm/dist/assets/js/19.3afd398b.js"><link rel="prefetch" href="/asm/dist/assets/js/20.4ec6db32.js"><link rel="prefetch" href="/asm/dist/assets/js/21.83eba868.js"><link rel="prefetch" href="/asm/dist/assets/js/22.04d107ba.js"><link rel="prefetch" href="/asm/dist/assets/js/23.0be93da2.js"><link rel="prefetch" href="/asm/dist/assets/js/24.eb6cdbb6.js"><link rel="prefetch" href="/asm/dist/assets/js/3.f5310743.js"><link rel="prefetch" href="/asm/dist/assets/js/4.bc7cf726.js"><link rel="prefetch" href="/asm/dist/assets/js/5.d250cb53.js"><link rel="prefetch" href="/asm/dist/assets/js/6.8779df89.js"><link rel="prefetch" href="/asm/dist/assets/js/7.cf8be782.js"><link rel="prefetch" href="/asm/dist/assets/js/8.8da49321.js"><link rel="prefetch" href="/asm/dist/assets/js/9.b22ce25b.js">
+    <link rel="stylesheet" href="/asm/dist/assets/css/0.styles.bcf31e2a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/asm/dist/" class="home-link router-link-active"><!----> <span class="site-name">ASM</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/asm/dist/" class="nav-link">
+  主页
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/asm/dist/" class="nav-link">
+  主页
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/asm/dist/AsmSummarize.html" class="sidebar-link">asm教程概述</a></li><li><a href="/asm/dist/visualstudio/" class="sidebar-link">Visual Studio</a></li><li><a href="/asm/dist/cplus/" class="sidebar-link">c++基础</a></li><li><a href="/asm/dist/cplus/cClass.html" class="sidebar-link">C++的类</a></li><li><a href="/asm/dist/cplus/cAdvanced.html" class="sidebar-link">C++ 进阶</a></li><li><a href="/asm/dist/cplus/dll.html" class="sidebar-link">DLL</a></li><li><a href="/asm/dist/cplus/CC.html" class="sidebar-link">C#</a></li><li><a href="/asm/dist/asm/" aria-current="page" class="sidebar-link">asm概述</a></li><li><a href="/asm/dist/asm/basic.html" class="sidebar-link">asm基础</a></li><li><a href="/asm/dist/asm/operator.html" class="sidebar-link">asm运算符和指令</a></li><li><a href="/asm/dist/asm/stack.html" class="sidebar-link">堆栈与函数</a></li><li><a href="/asm/dist/asm/bool.html" class="sidebar-link">汇编条件跳转判断</a></li><li><a href="/asm/dist/asm/function.html" class="sidebar-link">高级函数过程</a></li><li><a href="/asm/dist/asm/float.html" class="sidebar-link">浮点数</a></li><li><a href="/asm/dist/asm/example.html" aria-current="page" class="active sidebar-link">汇编示例</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/asm/dist/asm/example.html#快速排序" class="sidebar-link">快速排序</a></li></ul></li><li><a href="/asm/dist/ddt/" class="sidebar-link">弹弹堂</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="汇编示例"><a href="#汇编示例" class="header-anchor">#</a> 汇编示例</h1> <h2 id="快速排序"><a href="#快速排序" class="header-anchor">#</a> 快速排序</h2> <p>快速排序结合与归并(归并排序)思想之上
+选一个 中间数 来进行排序
+小于中间数放左边  大于中间数放右边</p> <ol><li><p>如下图所示:
+<img src="/img_13.png" alt="image">
+3为基准数 小于3的都在左边 大于3的都在右边</p></li> <li><p>虽然只放了一次还没有递归就已经完成了顺序的排序,但还是如下图所示:
+<img src="/img_14.png" alt="image">
+已3位基址数为中心
+在对 1和2进行快速排序 选1为基准数 2就放在了右边
+在对 5和9进行快速排序 选5位基准数 9就放在右边</p></li> <li><p>我们先用C++编写</p></li></ol> <div class="language-c extra-class"><pre class="language-c"><code><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> nums<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span><span class="token number">123</span><span class="token punctuation">,</span><span class="token number">123</span><span class="token punctuation">,</span><span class="token number">5432</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">353</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+	<span class="token keyword">int</span> len <span class="token operator">=</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">quickSort</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span> len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">quickSort</span><span class="token punctuation">(</span><span class="token keyword">int</span> ns<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span> start<span class="token punctuation">,</span><span class="token keyword">int</span> end <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>end <span class="token operator">-</span> start <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//一般3个数即可 如 3 2 1 拿出 2 则是 1 2 3</span>
+		<span class="token keyword">return</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token comment">//获取基准数下标</span>
+	<span class="token keyword">int</span> m <span class="token operator">=</span> <span class="token function">partition</span><span class="token punctuation">(</span>ns<span class="token punctuation">,</span>start<span class="token punctuation">,</span>end<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">//递归快速排序左侧</span>
+	<span class="token function">quickSort</span><span class="token punctuation">(</span>ns<span class="token punctuation">,</span> start<span class="token punctuation">,</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">//递归快速排序右侧</span>
+	<span class="token function">quickSort</span><span class="token punctuation">(</span>ns<span class="token punctuation">,</span> m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> end<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+ <span class="token keyword">int</span> <span class="token function">partition</span><span class="token punctuation">(</span><span class="token keyword">int</span> ns<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">int</span> start<span class="token punctuation">,</span> <span class="token keyword">int</span> end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">//基准数就选第一个</span>
+	<span class="token keyword">int</span> pivot <span class="token operator">=</span> ns<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token comment">//i寻大于基准数的下标</span>
+	<span class="token keyword">int</span> i <span class="token operator">=</span> start <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token comment">//j寻小于基准数的下标</span>
+	<span class="token keyword">int</span> j <span class="token operator">=</span> end <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">//i找到比基准数大则终止</span>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span>ns<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> pivot <span class="token operator">&amp;&amp;</span> i <span class="token operator">&lt;</span> end<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> i<span class="token operator">++</span><span class="token punctuation">;</span>
+		<span class="token comment">//j找到比基准数小则终止</span>
+		<span class="token keyword">while</span> <span class="token punctuation">(</span>ns<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> pivot <span class="token operator">&amp;&amp;</span> j <span class="token operator">&gt;</span> start<span class="token punctuation">)</span> j<span class="token operator">--</span><span class="token punctuation">;</span>
+
+		<span class="token comment">//交换i和j</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span><span class="token punctuation">{</span>
+		  <span class="token function">swapArray</span><span class="token punctuation">(</span>ns<span class="token punctuation">,</span> i<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">//j &lt;= i 基准数互换j的位置 做为中间数    </span>
+	<span class="token function">swapArray</span><span class="token punctuation">(</span>ns<span class="token punctuation">,</span>start<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> j<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">swapArray</span><span class="token punctuation">(</span><span class="token keyword">int</span> ns<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token keyword">int</span> i<span class="token punctuation">,</span><span class="token keyword">int</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">int</span> tmp <span class="token operator">=</span> ns<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	ns<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> ns<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	ns<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> 
+</code></pre></div><ol start="4"><li>翻译汇编</li></ol> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>我建议还是你们自己照着c++翻译一遍，或者用c++反汇编看下在自己写，
+我自己写的自己都辣眼睛,调试半天才没出bug 不知道哪里还有其他bug。。
+结果最终正确，索性也懒得改了，累了</p></div> <div class="language-c extra-class"><pre class="language-c"><code><span class="token punctuation">.</span>data
+
+<span class="token punctuation">.</span>code
+
+<span class="token punctuation">;</span>快速排序
+quickSortASM proc
+	mov <span class="token punctuation">[</span>rsp<span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span>rcx<span class="token punctuation">;</span> 数组指针参数
+	mov <span class="token punctuation">[</span>rsp<span class="token operator">+</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">,</span>rdx<span class="token punctuation">;</span> start
+	mov <span class="token punctuation">[</span>rsp<span class="token operator">+</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">,</span>r8<span class="token punctuation">;</span> end
+	push rbp<span class="token punctuation">;</span>
+	mov rbp<span class="token punctuation">,</span>rsp<span class="token punctuation">;</span>
+	sub rsp<span class="token punctuation">,</span> <span class="token number">108</span>h<span class="token punctuation">;</span> 栈空间扩充<span class="token number">264</span>字节
+
+	<span class="token punctuation">;</span>end <span class="token operator">-</span>start <span class="token operator">&lt;</span><span class="token number">1</span> stop
+	mov eax<span class="token punctuation">,</span>dword ptr <span class="token punctuation">[</span>rbp<span class="token operator">+</span><span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">;</span> end
+	sub eax<span class="token punctuation">,</span>dword ptr <span class="token punctuation">[</span>rbp<span class="token operator">+</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span> end <span class="token operator">-</span> start
+	cmp eax<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">;</span>
+	jb L1<span class="token punctuation">;</span>
+
+	<span class="token punctuation">;</span>获取基准数位置
+	mov rcx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp<span class="token operator">+</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	mov rdx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp<span class="token operator">+</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	mov r8<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp<span class="token operator">+</span><span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	call paritionASM<span class="token punctuation">;</span>
+	mov <span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span>rax<span class="token punctuation">;</span> mid
+
+
+	<span class="token punctuation">;</span><span class="token function">quickSortASM</span><span class="token punctuation">(</span>arry<span class="token punctuation">,</span>start<span class="token punctuation">,</span>mid<span class="token punctuation">)</span> 
+	mov rcx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp<span class="token operator">+</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	mov rdx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp<span class="token operator">+</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	mov r8<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	call quickSortASM<span class="token punctuation">;</span>
+
+	<span class="token punctuation">;</span><span class="token function">quickSortASM</span><span class="token punctuation">(</span>arry<span class="token punctuation">,</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>end<span class="token punctuation">)</span> 
+	mov rcx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp<span class="token operator">+</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	mov rdx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	inc rdx<span class="token punctuation">;</span>
+	mov r8<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp<span class="token operator">+</span><span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	call quickSortASM<span class="token punctuation">;</span>
+
+	L1<span class="token operator">:</span>
+	 mov rsp<span class="token punctuation">,</span>rbp<span class="token punctuation">;</span>
+	 pop rbp<span class="token punctuation">;</span>
+	 ret<span class="token punctuation">;</span>
+quickSortASM endp
+
+
+<span class="token punctuation">;</span>找基准数
+paritionASM proc
+	<span class="token punctuation">;</span>arrayPtr start end
+	mov <span class="token punctuation">[</span>rsp<span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span>rcx<span class="token punctuation">;</span>
+	mov <span class="token punctuation">[</span>rsp<span class="token operator">+</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">,</span>rdx<span class="token punctuation">;</span>
+	mov <span class="token punctuation">[</span>rsp<span class="token operator">+</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">,</span>r8<span class="token punctuation">;</span>
+	push rbp<span class="token punctuation">;</span>
+	mov rbp<span class="token punctuation">,</span>rsp<span class="token punctuation">;</span>
+	<span class="token punctuation">;</span>rsp 栈指针 扩大<span class="token number">264</span>字节用来存放局部变量或递归参数
+	sub rsp<span class="token punctuation">,</span><span class="token number">108</span>h<span class="token punctuation">;</span>
+
+	mov rdi<span class="token punctuation">,</span> <span class="token punctuation">[</span>rbp <span class="token operator">+</span> <span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 数组指针
+	mov rbx<span class="token punctuation">,</span> <span class="token punctuation">[</span>rbp <span class="token operator">+</span> <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 开始下标
+	mov rdx<span class="token punctuation">,</span> <span class="token punctuation">[</span>rbp <span class="token operator">+</span> <span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">;</span> end下标
+
+	<span class="token punctuation">;</span>基准值 默认取第一个作为基准值
+	mov eax<span class="token punctuation">,</span>dword ptr <span class="token punctuation">[</span>rdi <span class="token operator">+</span> rbx<span class="token operator">*</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	mov <span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span>eax<span class="token punctuation">;</span> 
+
+	<span class="token punctuation">;</span>i 左侧交换大值下标
+	inc rbx<span class="token punctuation">;</span>
+	mov <span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">,</span>rbx<span class="token punctuation">;</span>
+
+	<span class="token punctuation">;</span>j 右侧交换小值下标
+	dec rdx<span class="token punctuation">;</span>
+	mov <span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">,</span>rdx<span class="token punctuation">;</span>
+	mov <span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">,</span>rdx<span class="token punctuation">;</span>余留 end <span class="token operator">-</span><span class="token number">1</span>
+
+
+
+	<span class="token punctuation">;</span>循环查找 i  j  交换下标
+	L1<span class="token operator">:</span>
+	  mov eax<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp<span class="token operator">-</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	  mov ebx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp<span class="token operator">-</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	  cmp eax<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp<span class="token operator">-</span><span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	  jb L2<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> j
+	  jmp L5<span class="token punctuation">;</span>
+ 
+	<span class="token punctuation">;</span>i查找第一个大于基准数的下标 
+	L2<span class="token operator">:</span>
+	  mov rdi<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span> i下标
+	  mov rsi<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">+</span> <span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 数组指针
+	  mov ebx<span class="token punctuation">,</span><span class="token punctuation">[</span>rsi <span class="token operator">+</span> rdi<span class="token operator">*</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>i下标的值 
+	  cmp ebx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 比较基准数
+	  jae L3<span class="token punctuation">;</span>  arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> pivot
+	  cmp rdi<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> end <span class="token operator">-</span> <span class="token number">1</span>
+	  jae L3<span class="token punctuation">;</span>  i <span class="token operator">&gt;=</span> end <span class="token operator">-</span><span class="token number">1</span> 直接跳过
+	  inc rdi<span class="token punctuation">;</span>
+	  mov <span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">,</span>rdi<span class="token punctuation">;</span> <span class="token comment">//累加i</span>
+	  jmp L2<span class="token punctuation">;</span>
+
+	<span class="token punctuation">;</span>j查找第一个小于基准数的下标
+	L3<span class="token operator">:</span>
+	  mov rdi<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span> j下标
+	  mov rsi<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">+</span> <span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 数组指针
+	  mov ebx<span class="token punctuation">,</span><span class="token punctuation">[</span>rsi <span class="token operator">+</span> rdi<span class="token operator">*</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>j下标的值
+	  cmp ebx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 比较基准数
+	  jb L4<span class="token punctuation">;</span> arry<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> pivot
+	  cmp rdi<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">+</span> <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+	  jbe L4<span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> start 
+	  dec rdi<span class="token punctuation">;</span>
+	  mov <span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">,</span>rdi<span class="token punctuation">;</span>
+	  jmp L3<span class="token punctuation">;</span>
+
+
+	<span class="token punctuation">;</span>替换 i j
+	L4<span class="token operator">:</span>
+	  mov eax<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span> i
+	  cmp eax<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span> i cmp j
+	  jae L5<span class="token punctuation">;</span> i <span class="token operator">&gt;=</span> j
+	  mov rcx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp<span class="token operator">+</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	  mov rdx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	  mov r8<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	  call swapASM<span class="token punctuation">;</span>
+	  jmp L1<span class="token punctuation">;</span>
+  
+
+
+	<span class="token punctuation">;</span>结束循环的时候 肯定 i <span class="token operator">&gt;=</span> j 直接用j交换小的 
+	L5<span class="token operator">:</span>
+	<span class="token punctuation">;</span>基准数交换
+	mov rcx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp<span class="token operator">+</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 数组指针
+	mov rdx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">+</span> <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span> start 下标
+	mov r8<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 下标 
+	call swapASM<span class="token punctuation">;</span>
+
+	<span class="token punctuation">;</span>直接结束
+	L6<span class="token operator">:</span>
+	 mov eax<span class="token punctuation">,</span>dword ptr <span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span> j
+	 mov rsp<span class="token punctuation">,</span>rbp<span class="token punctuation">;</span>
+	 pop rbp<span class="token punctuation">;</span>
+ 
+	 ret<span class="token punctuation">;</span>
+
+paritionASM endp<span class="token punctuation">;</span>
+
+
+swapASM proc
+  mov rax<span class="token punctuation">,</span><span class="token punctuation">[</span>rsp<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  mov <span class="token punctuation">[</span>rsp <span class="token operator">+</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span>rcx<span class="token punctuation">;</span> 数组指针
+  mov <span class="token punctuation">[</span>rsp <span class="token operator">+</span> <span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">,</span>rdx<span class="token punctuation">;</span> i 
+  mov <span class="token punctuation">[</span>rsp <span class="token operator">+</span> <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">,</span>r8<span class="token punctuation">;</span> j
+  push rbp<span class="token punctuation">;</span>
+  mov rbp<span class="token punctuation">,</span>rsp<span class="token punctuation">;</span>
+  sub rsp<span class="token punctuation">,</span><span class="token number">108</span>h<span class="token punctuation">;</span>
+
+  mov rsi<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">+</span> <span class="token number">16</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  mov rbx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp <span class="token operator">+</span> <span class="token number">24</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+  mov rdx<span class="token punctuation">,</span><span class="token punctuation">[</span>rbp<span class="token operator">+</span> <span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">;</span>tmp i
+  mov eax<span class="token punctuation">,</span>dword ptr<span class="token punctuation">[</span>rsi <span class="token operator">+</span> rbx<span class="token operator">*</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+  mov qword ptr <span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span>rax<span class="token punctuation">;</span>
+  
+ 
+ <span class="token punctuation">;</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+  mov eax<span class="token punctuation">,</span>dword ptr <span class="token punctuation">[</span>rsi <span class="token operator">+</span> rdx<span class="token operator">*</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  mov <span class="token punctuation">[</span>rsi <span class="token operator">+</span> rbx<span class="token operator">*</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token punctuation">,</span>eax<span class="token punctuation">;</span>
+
+
+  <span class="token punctuation">;</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+  mov eax<span class="token punctuation">,</span>dword ptr <span class="token punctuation">[</span>rbp <span class="token operator">-</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+  mov <span class="token punctuation">[</span>rsi <span class="token operator">+</span> rdx<span class="token operator">*</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>eax<span class="token punctuation">;</span>
+
+  mov rsp<span class="token punctuation">,</span>rbp<span class="token punctuation">;</span> 还原rsp栈指针
+
+  pop rbp<span class="token punctuation">;</span>
+  ret<span class="token punctuation">;</span>
+swapASM endp
+
+end
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">5/4/2022, 10:46:04 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/asm/dist/asm/float.html" class="prev">
+        浮点数
+      </a></span> <span class="next"><a href="/asm/dist/ddt/">
+        弹弹堂
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/asm/dist/assets/js/app.48ba16dc.js" defer></script><script src="/asm/dist/assets/js/2.c8a9966a.js" defer></script><script src="/asm/dist/assets/js/11.25fa1964.js" defer></script>
+  </body>
+</html>
