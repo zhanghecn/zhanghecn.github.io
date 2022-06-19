@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>asm教程概述 | ASM</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="ASM教程">
+    
+    <link rel="preload" href="/asm/dist/assets/css/0.styles.bcf31e2a.css" as="style"><link rel="preload" href="/asm/dist/assets/js/app.6634fcdc.js" as="script"><link rel="preload" href="/asm/dist/assets/js/2.c8a9966a.js" as="script"><link rel="preload" href="/asm/dist/assets/js/7.cf8be782.js" as="script"><link rel="prefetch" href="/asm/dist/assets/js/10.bcf60c5c.js"><link rel="prefetch" href="/asm/dist/assets/js/11.548c431c.js"><link rel="prefetch" href="/asm/dist/assets/js/12.1e9ff982.js"><link rel="prefetch" href="/asm/dist/assets/js/13.cee08286.js"><link rel="prefetch" href="/asm/dist/assets/js/14.0c34b073.js"><link rel="prefetch" href="/asm/dist/assets/js/15.55afd9f3.js"><link rel="prefetch" href="/asm/dist/assets/js/16.5fc6bad5.js"><link rel="prefetch" href="/asm/dist/assets/js/17.70286e2b.js"><link rel="prefetch" href="/asm/dist/assets/js/18.8ef81a29.js"><link rel="prefetch" href="/asm/dist/assets/js/19.3afd398b.js"><link rel="prefetch" href="/asm/dist/assets/js/20.5d3c78e4.js"><link rel="prefetch" href="/asm/dist/assets/js/21.f610ef5f.js"><link rel="prefetch" href="/asm/dist/assets/js/22.ee117ac9.js"><link rel="prefetch" href="/asm/dist/assets/js/23.c03a1a4d.js"><link rel="prefetch" href="/asm/dist/assets/js/24.7537d8de.js"><link rel="prefetch" href="/asm/dist/assets/js/3.f5310743.js"><link rel="prefetch" href="/asm/dist/assets/js/4.bc7cf726.js"><link rel="prefetch" href="/asm/dist/assets/js/5.d250cb53.js"><link rel="prefetch" href="/asm/dist/assets/js/6.8779df89.js"><link rel="prefetch" href="/asm/dist/assets/js/8.f2edada3.js"><link rel="prefetch" href="/asm/dist/assets/js/9.fb834f7f.js">
+    <link rel="stylesheet" href="/asm/dist/assets/css/0.styles.bcf31e2a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/asm/dist/" class="home-link router-link-active"><!----> <span class="site-name">ASM</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/asm/dist/" class="nav-link">
+  主页
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/asm/dist/" class="nav-link">
+  主页
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/asm/dist/AsmSummarize.html" aria-current="page" class="active sidebar-link">asm教程概述</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/asm/dist/AsmSummarize.html#为什么我会写asm这个教程-asm又是个啥" class="sidebar-link">为什么我会写asm这个教程？asm又是个啥？</a></li><li class="sidebar-sub-header"><a href="/asm/dist/AsmSummarize.html#java相关" class="sidebar-link">java相关</a></li><li class="sidebar-sub-header"><a href="/asm/dist/AsmSummarize.html#页面教程" class="sidebar-link">页面教程</a></li><li class="sidebar-sub-header"><a href="/asm/dist/AsmSummarize.html#vuepressg入门" class="sidebar-link">vuepressg入门</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/asm/dist/AsmSummarize.html#相对路径示意图" class="sidebar-link">相对路径示意图</a></li><li class="sidebar-sub-header"><a href="/asm/dist/AsmSummarize.html#docs子目录用处" class="sidebar-link">docs子目录用处</a></li><li class="sidebar-sub-header"><a href="/asm/dist/AsmSummarize.html#vuepress配置" class="sidebar-link">vuepress配置</a></li></ul></li></ul></li><li><a href="/asm/dist/visualstudio/" class="sidebar-link">Visual Studio</a></li><li><a href="/asm/dist/cplus/" class="sidebar-link">c++基础</a></li><li><a href="/asm/dist/cplus/cClass.html" class="sidebar-link">C++的类</a></li><li><a href="/asm/dist/cplus/cAdvanced.html" class="sidebar-link">C++ 进阶</a></li><li><a href="/asm/dist/cplus/dll.html" class="sidebar-link">DLL</a></li><li><a href="/asm/dist/cplus/CC.html" class="sidebar-link">C#</a></li><li><a href="/asm/dist/asm/" class="sidebar-link">asm概述</a></li><li><a href="/asm/dist/asm/basic.html" class="sidebar-link">asm基础</a></li><li><a href="/asm/dist/asm/operator.html" class="sidebar-link">asm运算符和指令</a></li><li><a href="/asm/dist/asm/stack.html" class="sidebar-link">堆栈与函数</a></li><li><a href="/asm/dist/asm/bool.html" class="sidebar-link">汇编条件跳转判断</a></li><li><a href="/asm/dist/asm/function.html" class="sidebar-link">高级函数过程</a></li><li><a href="/asm/dist/asm/float.html" class="sidebar-link">浮点数</a></li><li><a href="/asm/dist/asm/example.html" class="sidebar-link">汇编示例</a></li><li><a href="/asm/dist/ddt/" class="sidebar-link">弹弹堂</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="asm教程概述"><a href="#asm教程概述" class="header-anchor">#</a> asm教程概述</h1> <blockquote><p>教程使用vuepress 基于markdown部分编写教程</p></blockquote> <p></p><div class="table-of-contents"><ul><li><a href="#为什么我会写asm这个教程-asm又是个啥">为什么我会写asm这个教程？asm又是个啥？</a></li><li><a href="#java相关">java相关</a></li><li><a href="#页面教程">页面教程</a></li><li><a href="#vuepressg入门">vuepressg入门</a><ul><li><a href="#相对路径示意图">相对路径示意图</a></li><li><a href="#docs子目录用处">docs子目录用处</a></li><li><a href="#vuepress配置">vuepress配置</a></li></ul></li></ul></div><p></p> <h2 id="为什么我会写asm这个教程-asm又是个啥"><a href="#为什么我会写asm这个教程-asm又是个啥" class="header-anchor">#</a> 为什么我会写asm这个教程？asm又是个啥？</h2> <ul><li>asm 个人理解是个汇编语言,基于汇编语言理解对于我们来说很好的了解部分电脑结构 也方便以后扩展 我也会在教程末尾基于asm写个辅助软件</li></ul> <h2 id="java相关"><a href="#java相关" class="header-anchor">#</a> java相关</h2> <ul><li><p>为什么说这个设计到java？==当然如果你不是弄java的可以别过，哈哈哈==</p></li> <li><p>个人其实是主java的,由于设计到字节码与虚拟机部分，还是需要了解asm,并且自己其实也想对以前怀念的游戏写个辅助满足下自己，所以其实后面大部分教程还是以Java为主，汇编破解会比较少，不过都挺有用的。</p></li></ul> <h2 id="页面教程"><a href="#页面教程" class="header-anchor">#</a> 页面教程</h2> <blockquote><p>页面教程其实本质也是用markdown只不过会使用vuepress去生成页面罢了</p></blockquote> <p><span style="color:Red;"> 下面的只是说明这个网站的文档编写是如何写的,并不是主题，请忽略哦</span></p> <h1 id="vuepressg"><a href="#vuepressg" class="header-anchor">#</a> vuepressg</h1> <ul><li><h2 id="vuepressg入门"><a href="#vuepressg入门" class="header-anchor">#</a> vuepressg入门</h2></li></ul> <p>进入主题,==如果你并不是弄前端的可忽略，甚至后面都可忽略。==</p> <ol><li>vuepress是啥？
+VuePress 基于Vue驱动专门为书写技术文档而优化的默认主题</li> <li>如何工作？
+VuePress网站基于Vue技术生态,Vue+Vue Router + webpack驱动的单页面应用。
+构建时，可从markdown文件渲染到html</li> <li>准备上手</li></ol> <div class="language- extra-class"><pre class="language-text"><code>mkdir asm-doc #创建工作目录
+yarn init #初始化工作目录
+yarn add -D vuepress #添加本地依赖
+mkdir docs # 创建存放markdown文档的地方
+echo '# Hello VuePress' &gt; docs/README.md #追加内容 到新文件README.md 中
+</code></pre></div><blockquote><p>如果您有好的IDE开发软件的话,那么此时可以预览</p></blockquote> <p><img src="https://note.youdao.com/yws/res/1002/WEBRESOURCEa14a91b8a8b2a9a42ecfc9eff80d02c0" alt="image.png">
+4. 准备运行
+在package.json加入运行脚本</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;scripts&quot;: {
+    &quot;docs:dev&quot;: &quot;vuepress dev docs&quot;, #运行开发服务器
+    &quot;docs:build&quot;: &quot;vuepress build docs&quot; #构建文档
+  }
+}
+</code></pre></div><p>运行加入的脚本命令</p> <div class="language- extra-class"><pre class="language-text"><code>docs:dev
+</code></pre></div><blockquote><p>==此时的效果就如您编写的文件那样了==
+<img src="https://note.youdao.com/yws/res/1012/WEBRESOURCEab555aec178e954efafb00f891077ddf" alt="image.png"></p></blockquote> <h1 id="vuepress-目录结构"><a href="#vuepress-目录结构" class="header-anchor">#</a> vuepress 目录结构</h1> <blockquote><p>.
+├── docs
+│   ├── .vuepress (可选的)
+│   │   ├── components (可选的)
+│   │   ├── theme (可选的)
+│   │   │   └── Layout.vue
+│   │   ├── public (可选的)
+│   │   ├── styles (可选的)
+│   │   │   ├── index.styl
+│   │   │   └── palette.styl
+│   │   ├── templates (可选的, 谨慎配置)
+│   │   │   ├── dev.html
+│   │   │   └── ssr.html
+│   │   ├── config.js (可选的)
+│   │   └── enhanceApp.js (可选的)
+│   │
+│   ├── README.md
+│   ├── guide
+│   │   └── README.md
+│   └── config.md
+│
+└── package.json</p></blockquote> <p>在docs目录中,作为引导目录，对应的是在之前编写的运行脚本</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;scripts&quot;: {
+    &quot;docs:dev&quot;: &quot;vuepress dev docs&quot;,
+    &quot;docs:build&quot;: &quot;vuepress build docs&quot; 
+  }
+}
+</code></pre></div><p><code>&quot;docs:dev&quot;: &quot;vuepress dev docs&quot;</code>
+里面的 vuepress dev ==docs== 中的  docs就是指定起到的目录位置</p> <hr> <h3 id="相对路径示意图"><a href="#相对路径示意图" class="header-anchor">#</a> 相对路径示意图</h3> <table><thead><tr><th>文件相对路径</th> <th>页面路由路径</th></tr></thead> <tbody><tr><td>/README.md</td> <td>/</td></tr> <tr><td>/guide/README.md</td> <td>/guide/</td></tr> <tr><td>/config.md</td> <td>/config.html</td></tr></tbody></table> <hr> <h3 id="docs子目录用处"><a href="#docs子目录用处" class="header-anchor">#</a> docs子目录用处</h3> <ul><li><code>docs/.vuepress</code> 存放全局配置 组件 资源静态</li> <li><code>docs/.vuepress/components</code> 存放vue组件</li> <li><code>docs/.vuepress/theme</code> 存放主题</li> <li><code>docs/.vuepress/styles</code> 样式</li> <li><code>docs/.vuepress/public</code> 静态资源文件</li> <li><code>docs/.vuepress/templates</code> html模板文件</li> <li><code>docs/.vuepress/config.js</code> 配置入口 可为yml或toml</li></ul> <hr> <h3 id="vuepress配置"><a href="#vuepress配置" class="header-anchor">#</a> vuepress配置</h3> <p>一个VuePress网站必要的配置文件是 <code>./vuepress/config.js</code>,
+它应该导出一个 JavaScript 对象</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'Hello VuePress'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">description</span><span class="token operator">:</span> <span class="token string">'Just playing around'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>对于上述的配置，如果你运行起 dev server，你应该能看到一个页面，它包含一个页头，里面包含一个标题和一个搜索框。VuePress 内置了基于 headers 的搜索 —— 它会自动为所有页面的标题、h2 和 h3 构建起一个简单的搜索索引。</p> <hr> <h5 id="主题配置"><a href="#主题配置" class="header-anchor">#</a> 主题配置</h5> <p>主题配置主要配置布局与交互，如侧边栏(sidebar) 首页(homepage) 导航栏(navbar)</p> <h5 id="首页"><a href="#首页" class="header-anchor">#</a> 首页</h5> <p>默认的主题提供了一个首页（Homepage）的布局 (用于 这个网站的主页)。想要使用它，需要在你的根级 README.md 的 YAML front matter 指定 home: true。以下是一个如何使用的例子：</p> <div class="language- extra-class"><pre class="language-text"><code>---
+home: true
+heroImage: /hero.png
+heroText: Hero 标题
+tagline: Hero 副标题
+actionText: 快速上手 →
+actionLink: /zh/guide/
+features:
+- title: 简洁至上
+  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
+- title: Vue驱动
+  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
+- title: 高性能
+  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+footer: MIT Licensed | Copyright © 2018-present Evan You
+---
+</code></pre></div><blockquote><p>效果图:
+<img src="https://note.youdao.com/yws/res/1128/WEBRESOURCE2279fde8b77ea11a7b701c3bdeea47fb" alt="image.png"></p></blockquote> <hr> <h4 id="导航栏"><a href="#导航栏" class="header-anchor">#</a> 导航栏</h4> <p>你可以通过 themeConfig.nav 增加一些导航栏链接:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// .vuepress/config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">themeConfig</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">nav</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Home'</span><span class="token punctuation">,</span> <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'/'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Guide'</span><span class="token punctuation">,</span> <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'/guide/'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'External'</span><span class="token punctuation">,</span> <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'https://google.com'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="侧边栏"><a href="#侧边栏" class="header-anchor">#</a> 侧边栏</h4> <blockquote><p>偷懒肯定用自动生成的</p></blockquote> <p>如果你希望自动生成一个仅仅包含了当前页面标题（headers）链接的侧边栏，你可以通过 配置文件 来实现：</p> <div class="language- extra-class"><pre class="language-text"><code>// .vuepress/config.js
+module.exports = {
+  themeConfig: {
+    sidebar: 'auto'
+  }
+}
+</code></pre></div><p>加入您的结构如下:</p> <div class="language- extra-class"><pre class="language-text"><code>.
+├─ README.md
+├─ foo
+│  ├─ README.md
+│  ├─ one.md
+│  └─ two.md
+└─ bar
+   ├─ README.md
+   ├─ three.md
+   └─ four.md
+</code></pre></div><p>您现在想进入foo/one.md中</p> <div class="language- extra-class"><pre class="language-text"><code>[Home](/) &lt;!-- 跳转到根部的 README.md --&gt;
+[foo](/foo/) &lt;!-- 跳转到 foo 文件夹的 index.html --&gt;
+[foo heading](./#heading) &lt;!-- 跳转到 foo/index.html 的特定标题位置 --&gt;
+[bar - three](../bar/three.md) &lt;!-- 具体文件可以使用 .md 结尾（推荐） --&gt;
+[bar - four](../bar/four.html) &lt;!-- 也可以用 .html --&gt;
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/21/2022, 9:46:48 PM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/asm/dist/visualstudio/">
+        Visual Studio
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/asm/dist/assets/js/app.6634fcdc.js" defer></script><script src="/asm/dist/assets/js/2.c8a9966a.js" defer></script><script src="/asm/dist/assets/js/7.cf8be782.js" defer></script>
+  </body>
+</html>

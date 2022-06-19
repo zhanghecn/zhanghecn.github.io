@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>asm基础 | ASM</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="ASM教程">
+    
+    <link rel="preload" href="/asm/dist/assets/css/0.styles.bcf31e2a.css" as="style"><link rel="preload" href="/asm/dist/assets/js/app.6634fcdc.js" as="script"><link rel="preload" href="/asm/dist/assets/js/2.c8a9966a.js" as="script"><link rel="preload" href="/asm/dist/assets/js/9.fb834f7f.js" as="script"><link rel="prefetch" href="/asm/dist/assets/js/10.bcf60c5c.js"><link rel="prefetch" href="/asm/dist/assets/js/11.548c431c.js"><link rel="prefetch" href="/asm/dist/assets/js/12.1e9ff982.js"><link rel="prefetch" href="/asm/dist/assets/js/13.cee08286.js"><link rel="prefetch" href="/asm/dist/assets/js/14.0c34b073.js"><link rel="prefetch" href="/asm/dist/assets/js/15.55afd9f3.js"><link rel="prefetch" href="/asm/dist/assets/js/16.5fc6bad5.js"><link rel="prefetch" href="/asm/dist/assets/js/17.70286e2b.js"><link rel="prefetch" href="/asm/dist/assets/js/18.8ef81a29.js"><link rel="prefetch" href="/asm/dist/assets/js/19.3afd398b.js"><link rel="prefetch" href="/asm/dist/assets/js/20.5d3c78e4.js"><link rel="prefetch" href="/asm/dist/assets/js/21.f610ef5f.js"><link rel="prefetch" href="/asm/dist/assets/js/22.ee117ac9.js"><link rel="prefetch" href="/asm/dist/assets/js/23.c03a1a4d.js"><link rel="prefetch" href="/asm/dist/assets/js/24.7537d8de.js"><link rel="prefetch" href="/asm/dist/assets/js/3.f5310743.js"><link rel="prefetch" href="/asm/dist/assets/js/4.bc7cf726.js"><link rel="prefetch" href="/asm/dist/assets/js/5.d250cb53.js"><link rel="prefetch" href="/asm/dist/assets/js/6.8779df89.js"><link rel="prefetch" href="/asm/dist/assets/js/7.cf8be782.js"><link rel="prefetch" href="/asm/dist/assets/js/8.f2edada3.js">
+    <link rel="stylesheet" href="/asm/dist/assets/css/0.styles.bcf31e2a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/asm/dist/" class="home-link router-link-active"><!----> <span class="site-name">ASM</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/asm/dist/" class="nav-link">
+  主页
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/asm/dist/" class="nav-link">
+  主页
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/asm/dist/AsmSummarize.html" class="sidebar-link">asm教程概述</a></li><li><a href="/asm/dist/visualstudio/" class="sidebar-link">Visual Studio</a></li><li><a href="/asm/dist/cplus/" class="sidebar-link">c++基础</a></li><li><a href="/asm/dist/cplus/cClass.html" class="sidebar-link">C++的类</a></li><li><a href="/asm/dist/cplus/cAdvanced.html" class="sidebar-link">C++ 进阶</a></li><li><a href="/asm/dist/cplus/dll.html" class="sidebar-link">DLL</a></li><li><a href="/asm/dist/cplus/CC.html" class="sidebar-link">C#</a></li><li><a href="/asm/dist/asm/" aria-current="page" class="sidebar-link">asm概述</a></li><li><a href="/asm/dist/asm/basic.html" aria-current="page" class="active sidebar-link">asm基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/asm/dist/asm/basic.html#第一个汇编程序" class="sidebar-link">第一个汇编程序</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/asm/dist/asm/basic.html#test-asm" class="sidebar-link">test.asm</a></li><li class="sidebar-sub-header"><a href="/asm/dist/asm/basic.html#c" class="sidebar-link">c++</a></li></ul></li><li class="sidebar-sub-header"><a href="/asm/dist/asm/basic.html#保留字" class="sidebar-link">保留字</a></li><li class="sidebar-sub-header"><a href="/asm/dist/asm/basic.html#伪指令" class="sidebar-link">伪指令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/asm/dist/asm/basic.html#定义段" class="sidebar-link">定义段</a></li></ul></li><li class="sidebar-sub-header"><a href="/asm/dist/asm/basic.html#汇编指令" class="sidebar-link">汇编指令</a></li><li class="sidebar-sub-header"><a href="/asm/dist/asm/basic.html#调试" class="sidebar-link">调试</a></li><li class="sidebar-sub-header"><a href="/asm/dist/asm/basic.html#数据类型" class="sidebar-link">数据类型</a></li></ul></li><li><a href="/asm/dist/asm/operator.html" class="sidebar-link">asm运算符和指令</a></li><li><a href="/asm/dist/asm/stack.html" class="sidebar-link">堆栈与函数</a></li><li><a href="/asm/dist/asm/bool.html" class="sidebar-link">汇编条件跳转判断</a></li><li><a href="/asm/dist/asm/function.html" class="sidebar-link">高级函数过程</a></li><li><a href="/asm/dist/asm/float.html" class="sidebar-link">浮点数</a></li><li><a href="/asm/dist/asm/example.html" class="sidebar-link">汇编示例</a></li><li><a href="/asm/dist/ddt/" class="sidebar-link">弹弹堂</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="asm基础"><a href="#asm基础" class="header-anchor">#</a> asm基础</h1> <p></p><div class="table-of-contents"><ul><li><a href="#第一个汇编程序">第一个汇编程序</a><ul><li><a href="#test-asm">test.asm</a></li><li><a href="#c">c++</a></li></ul></li><li><a href="#保留字">保留字</a></li><li><a href="#伪指令">伪指令</a><ul><li><a href="#定义段">定义段</a></li></ul></li><li><a href="#汇编指令">汇编指令</a></li><li><a href="#调试">调试</a></li><li><a href="#数据类型">数据类型</a></li></ul></div><p></p> <h2 id="第一个汇编程序"><a href="#第一个汇编程序" class="header-anchor">#</a> 第一个汇编程序</h2> <ul><li><p>先右键项目 - 生成依赖项 - 选中masm</p></li> <li><p>右键新建项-  创建test.app - 改成test.asm</p></li></ul> <h3 id="test-asm"><a href="#test-asm" class="header-anchor">#</a> test.asm</h3> <div class="language-c extra-class"><pre class="language-c"><code><span class="token punctuation">.</span>code
+
+GetEax proc
+    mov eax<span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">;</span> <span class="token comment">//将5放入寄存器eax</span>
+    add eax<span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">;</span>  <span class="token comment">// eax 累加6</span>
+    
+    ret <span class="token punctuation">;</span><span class="token keyword">return</span> result to caller
+GetEax endp
+
+end<span class="token punctuation">;</span>
+</code></pre></div><h3 id="c"><a href="#c" class="header-anchor">#</a> c++</h3> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+
+using namespace std<span class="token punctuation">;</span>
+
+<span class="token keyword">extern</span> <span class="token string">&quot;C&quot;</span> <span class="token keyword">int</span> <span class="token function">GetEax</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	
+
+
+	<span class="token keyword">int</span> result <span class="token operator">=</span> <span class="token function">GetEax</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	cout <span class="token operator">&lt;&lt;</span> result <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="保留字"><a href="#保留字" class="header-anchor">#</a> 保留字</h2> <p>保留字是不分大小写的: 如 mov Mov MOV</p> <p>保留字有不同的类型:</p> <ul><li>助记符:MOV ADD MUL</li> <li>寄存器名称: EAX EBX ECX EDX ESI EDI EBP ESP...</li> <li>伪指令: 告诉汇编程序如何汇编程序</li> <li>属性:提供变量和操作大小使用信息.列入:BYTE WORD DWORD...</li> <li>运算符:常量表达式中使用</li> <li>预定义符号:比如@data，它在汇编时返回常量的整数值</li></ul> <p>常用的保留字:</p> <table><tbody><tr><td>
+				$</td> <td>
+				PARITY?</td> <td>
+				DWORD</td> <td>
+				STDCALL</td></tr> <tr><td>
+				?</td> <td>
+				PASCAL</td> <td>
+				FAR</td> <td>
+				SWORD</td></tr> <tr><td>
+				@B</td> <td>
+				QWORD</td> <td>
+				FAR16</td> <td>
+				SYSCALL</td></tr> <tr><td>
+				@F</td> <td>
+				REAL4</td> <td>
+				FORTRAN</td> <td>
+				TBYTE</td></tr> <tr><td>
+				ADDR</td> <td>
+				REAL8</td> <td>
+				FWORD</td> <td>
+				VARARG</td></tr> <tr><td>
+				BASIC</td> <td>
+				REAL10</td> <td>
+				NEAR</td> <td>
+				WORD</td></tr> <tr><td>
+				BYTE</td> <td>
+				SBYTE</td> <td>
+				NEAR16</td> <td>
+				ZERO?</td></tr> <tr><td>
+				C</td> <td>
+				SDORD</td> <td>
+				OVERFLOW?</td> <td>
+				 </td></tr> <tr><td>
+				CARRY?</td> <td>
+				SIGN?</td> <td>
+				 </td> <td>
+				 </td></tr></tbody></table> <h2 id="伪指令"><a href="#伪指令" class="header-anchor">#</a> 伪指令</h2> <p>是嵌入源代码中的命令,由汇编识别和运行。
+用于定义变量，宏和子程序；为内存分配名称，执行许多其他与汇编相关的日常任务。</p> <p>如：</p> <div class="language-c extra-class"><pre class="language-c"><code>myVar DWORD <span class="token number">26</span> #定义双字节变量 数据为<span class="token number">26</span>
+mov eax<span class="token punctuation">,</span>myVar # 赋予eax寄存器
+</code></pre></div><h3 id="定义段"><a href="#定义段" class="header-anchor">#</a> 定义段</h3> <p><code>.data</code> 定义变量数据段
+<code>.code</code> 包含可执行命令
+<code>.stack 100h</code> 栈大小</p> <h2 id="汇编指令"><a href="#汇编指令" class="header-anchor">#</a> 汇编指令</h2> <p>指令由4个部分组成:</p> <ol><li>标号(可选)</li> <li>助记符(必须)</li> <li>操作数(通常必须)</li> <li>注释(可选)</li></ol> <ul><li>标号
+数据标号定义变量位置，使用直接引用</li></ul> <div class="language-c extra-class"><pre class="language-c"><code>count DWORD <span class="token number">100</span> 
+</code></pre></div><div class="language-c extra-class"><pre class="language-c"><code>array DWORD <span class="token number">1024</span><span class="token punctuation">,</span><span class="token number">2048</span>
+      DWORD <span class="token number">4096</span><span class="token punctuation">,</span><span class="token number">8192</span>
+</code></pre></div><p>程序代码区:</p> <div class="language-asm extra-class"><pre class="language-text"><code>target:
+    mov ax,bx
+    ...
+    jmp target 跳回标号
+</code></pre></div><p>代码标号可以和指令在一起，也可以独立一行</p> <div class="language-c extra-class"><pre class="language-c"><code>L1<span class="token operator">:</span> mov ax<span class="token punctuation">,</span>bx<span class="token punctuation">;</span>
+L2<span class="token operator">:</span>
+</code></pre></div><ul><li>助记符
+常用如下:</li></ul> <div class="language-c extra-class"><pre class="language-c"><code>mov 分配数值
+mul 两数相乘
+add 两数相加
+jmp 跳到新位置
+sub 相减
+call 调用子程序<span class="token punctuation">(</span>函数<span class="token punctuation">)</span>
+</code></pre></div><ul><li>注释</li></ul> <div class="language-c extra-class"><pre class="language-c"><code>COMMENT <span class="token operator">!</span>
+       这是一个多行注释
+<span class="token operator">!</span>
+
+<span class="token punctuation">;</span> 这是一个单行注释
+</code></pre></div><ul><li>nop
+空指令 不做任何操作 但在内存中占用1个字节</li></ul> <h2 id="调试"><a href="#调试" class="header-anchor">#</a> 调试</h2> <p>visual studio 对汇编的调试还是很友好的</p> <p>由于生成的是64位程序,其中的eax就对应成了rax
+<img src="/asm/dist/img_4.png" alt="foo"></p> <p>还要注意一点我标红的地方
+<strong>B8</strong> 操作码对应助记符就是mov
+<strong>B3 C0</strong> 操作码对应的就是add</p> <h2 id="数据类型"><a href="#数据类型" class="header-anchor">#</a> 数据类型</h2> <p>汇编识别一组基本的数据类型
+按照数据大小字节 字 双字节 ，是否有符号 是整数还是实数来描述其类型。
+列如:</p> <div class="language-c extra-class"><pre class="language-c"><code>DWORD 无符号整数可以和
+SDWORD 有符号整数相互转换 
+</code></pre></div><p>下面了给出一组IEEE 标准实数格式</p> <table><tbody><tr><th>
+				类型</th> <th>
+				用法</th></tr> <tr><td>
+				BYTE</td> <td>
+				8 位无符号整数，B 代表字节</td></tr> <tr><td>
+				SBYTE</td> <td>
+				8 位有符号整数，S 代表有符号</td></tr> <tr><td>
+				WORD</td> <td>
+				16 位无符号整数</td></tr> <tr><td>
+				SWORD</td> <td>
+				16 位有符号整数</td></tr> <tr><td>
+				DWORD</td> <td>
+				32 位无符号整数，D 代表双（字）</td></tr> <tr><td>
+				SDWORD</td> <td>
+				32 位有符号整数，SD 代表有符号双（字）</td></tr> <tr><td>
+				FWORD</td> <td>
+				48 位整数（保护模式中的远指针）</td></tr> <tr><td>
+				QWORD</td> <td>
+				64 位整数，Q 代表四（字）</td></tr> <tr><td>
+				TBYTE</td> <td>
+				80 位（10 字节）整数，T 代表 10 字节</td></tr> <tr><td>
+				REAL4</td> <td>
+				32 位（4 字节）IEEE 短实数</td></tr> <tr><td>
+				REAL8</td> <td>
+				64 位（8 字节）IEEE 长实数</td></tr> <tr><td>
+				REAL10</td> <td>
+				80 位（10 字节）IEEE 扩展实数</td></tr></tbody></table> <ol><li>定义多初始化值</li></ol> <div class="language-c extra-class"><pre class="language-c"><code>list BYTE <span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">40</span>
+</code></pre></div><ol start="2"><li>定义字符串</li></ol> <div class="language-c extra-class"><pre class="language-c"><code>str BYTE <span class="token string">&quot;ABCDEFG&quot;</span><span class="token punctuation">,</span><span class="token number">0</span>
+</code></pre></div><ol start="3"><li>DUP操作符
+为多个项分配存储空间，为字符串和数组分配格外有用</li></ol> <div class="language-c extra-class"><pre class="language-c"><code>BYTE <span class="token number">20</span> <span class="token function">DUP</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> 分配<span class="token number">20</span>个直接数据都为<span class="token number">0</span>
+BYTE <span class="token number">4</span> <span class="token function">DUP</span><span class="token punctuation">(</span><span class="token string">&quot;STACK&quot;</span><span class="token punctuation">)</span> <span class="token number">4</span>个字节的字符串 
+</code></pre></div><ol start="4"><li>定位word和sword 数据</li></ol> <div class="language-c extra-class"><pre class="language-c"><code>word1 WORD <span class="token number">65535</span> <span class="token punctuation">;</span>无符号
+word2 SWORD <span class="token operator">-</span><span class="token number">32768</span>  <span class="token punctuation">;</span>有符号
+word1 WORD <span class="token operator">?</span>  <span class="token punctuation">;</span>未初始化
+</code></pre></div><p>还可以通过dup 来进行数组的初始化</p> <div class="language-c extra-class"><pre class="language-c"><code>array DWORD <span class="token number">5</span> <span class="token function">dup</span><span class="token punctuation">(</span><span class="token operator">?</span><span class="token punctuation">)</span> <span class="token number">5</span>个长度的数组 不初始化数据
+</code></pre></div><p>如果定义的是QWORD数组,那么数组的偏移量地址就为8个字节了</p> <div class="language-c extra-class"><pre class="language-c"><code>array  QWORD <span class="token number">5</span> <span class="token function">DUP</span><span class="token punctuation">(</span><span class="token operator">?</span><span class="token punctuation">)</span>
+</code></pre></div><ol start="5"><li>定义浮点类型</li></ol> <div class="language-c extra-class"><pre class="language-c"><code>rVal1 REAL4 <span class="token operator">-</span><span class="token number">1.2</span>
+rVal2 REAL8 <span class="token number">3.2E-260</span>
+rVal3 REAL10 <span class="token number">4.6E+4096</span>
+</code></pre></div><p>其中REAL4 为短实数 REAL8 长实数 REAL10扩展精度实数</p> <ol start="6"><li>测试变量加法程序</li></ol> <div class="language-c extra-class"><pre class="language-c"><code><span class="token punctuation">.</span>data
+firVal DWORD <span class="token number">123</span><span class="token punctuation">;</span>
+twoVal DWORD <span class="token number">456</span><span class="token punctuation">;</span>
+threVal DWORD <span class="token number">789</span><span class="token punctuation">;</span>
+
+
+<span class="token punctuation">.</span>code
+
+GetTotal PROC
+mov eax<span class="token punctuation">,</span>firVal<span class="token punctuation">;</span>
+add eax<span class="token punctuation">,</span>twoVal<span class="token punctuation">;</span>
+add eax<span class="token punctuation">,</span>threVal<span class="token punctuation">;</span>
+
+ret<span class="token punctuation">;</span>
+
+GetTotal ENDP<span class="token punctuation">;</span>
+END<span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>变量引用的数据内的偏移量，列如:</p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token punctuation">.</span>data
+var1 BYTE <span class="token number">10</span>H <span class="token comment">//16进制的10</span>
+<span class="token comment">//加入var1 的距离程序头地址的偏移为 0001001 如下指令将变量的值复制到al寄存器中 </span>
+mov al<span class="token punctuation">,</span>val1
+
+翻译成<span class="token number">16</span>进制机器码为<span class="token operator">:</span>
+A0 <span class="token number">0001001</span>
+另一种常用的写法为<span class="token operator">:</span>
+mov al<span class="token punctuation">,</span><span class="token punctuation">[</span>var1<span class="token punctuation">]</span> 
+一般来说这种写法设计到地址的运算 
+mov al<span class="token punctuation">,</span><span class="token punctuation">[</span>var1<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">]</span> 
+A0 <span class="token number">0001006</span>
+</code></pre></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/28/2022, 6:16:44 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/asm/dist/asm/" class="prev router-link-active">
+        asm概述
+      </a></span> <span class="next"><a href="/asm/dist/asm/operator.html">
+        asm运算符和指令
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/asm/dist/assets/js/app.6634fcdc.js" defer></script><script src="/asm/dist/assets/js/2.c8a9966a.js" defer></script><script src="/asm/dist/assets/js/9.fb834f7f.js" defer></script>
+  </body>
+</html>

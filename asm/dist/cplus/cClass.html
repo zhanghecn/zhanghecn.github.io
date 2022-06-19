@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>C++的类 | ASM</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="ASM教程">
+    
+    <link rel="preload" href="/asm/dist/assets/css/0.styles.bcf31e2a.css" as="style"><link rel="preload" href="/asm/dist/assets/js/app.6634fcdc.js" as="script"><link rel="preload" href="/asm/dist/assets/js/2.c8a9966a.js" as="script"><link rel="preload" href="/asm/dist/assets/js/20.5d3c78e4.js" as="script"><link rel="prefetch" href="/asm/dist/assets/js/10.bcf60c5c.js"><link rel="prefetch" href="/asm/dist/assets/js/11.548c431c.js"><link rel="prefetch" href="/asm/dist/assets/js/12.1e9ff982.js"><link rel="prefetch" href="/asm/dist/assets/js/13.cee08286.js"><link rel="prefetch" href="/asm/dist/assets/js/14.0c34b073.js"><link rel="prefetch" href="/asm/dist/assets/js/15.55afd9f3.js"><link rel="prefetch" href="/asm/dist/assets/js/16.5fc6bad5.js"><link rel="prefetch" href="/asm/dist/assets/js/17.70286e2b.js"><link rel="prefetch" href="/asm/dist/assets/js/18.8ef81a29.js"><link rel="prefetch" href="/asm/dist/assets/js/19.3afd398b.js"><link rel="prefetch" href="/asm/dist/assets/js/21.f610ef5f.js"><link rel="prefetch" href="/asm/dist/assets/js/22.ee117ac9.js"><link rel="prefetch" href="/asm/dist/assets/js/23.c03a1a4d.js"><link rel="prefetch" href="/asm/dist/assets/js/24.7537d8de.js"><link rel="prefetch" href="/asm/dist/assets/js/3.f5310743.js"><link rel="prefetch" href="/asm/dist/assets/js/4.bc7cf726.js"><link rel="prefetch" href="/asm/dist/assets/js/5.d250cb53.js"><link rel="prefetch" href="/asm/dist/assets/js/6.8779df89.js"><link rel="prefetch" href="/asm/dist/assets/js/7.cf8be782.js"><link rel="prefetch" href="/asm/dist/assets/js/8.f2edada3.js"><link rel="prefetch" href="/asm/dist/assets/js/9.fb834f7f.js">
+    <link rel="stylesheet" href="/asm/dist/assets/css/0.styles.bcf31e2a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/asm/dist/" class="home-link router-link-active"><!----> <span class="site-name">ASM</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/asm/dist/" class="nav-link">
+  主页
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/asm/dist/" class="nav-link">
+  主页
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/asm/dist/AsmSummarize.html" class="sidebar-link">asm教程概述</a></li><li><a href="/asm/dist/visualstudio/" class="sidebar-link">Visual Studio</a></li><li><a href="/asm/dist/cplus/" aria-current="page" class="sidebar-link">c++基础</a></li><li><a href="/asm/dist/cplus/cClass.html" aria-current="page" class="active sidebar-link">C++的类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/asm/dist/cplus/cClass.html#首先创建room-房子类" class="sidebar-link">首先创建room 房子类</a></li><li class="sidebar-sub-header"><a href="/asm/dist/cplus/cClass.html#然后再派生类汤臣一品" class="sidebar-link">然后再派生类汤臣一品</a></li><li class="sidebar-sub-header"><a href="/asm/dist/cplus/cClass.html#使用" class="sidebar-link">使用</a></li></ul></li><li><a href="/asm/dist/cplus/cAdvanced.html" class="sidebar-link">C++ 进阶</a></li><li><a href="/asm/dist/cplus/dll.html" class="sidebar-link">DLL</a></li><li><a href="/asm/dist/cplus/CC.html" class="sidebar-link">C#</a></li><li><a href="/asm/dist/asm/" class="sidebar-link">asm概述</a></li><li><a href="/asm/dist/asm/basic.html" class="sidebar-link">asm基础</a></li><li><a href="/asm/dist/asm/operator.html" class="sidebar-link">asm运算符和指令</a></li><li><a href="/asm/dist/asm/stack.html" class="sidebar-link">堆栈与函数</a></li><li><a href="/asm/dist/asm/bool.html" class="sidebar-link">汇编条件跳转判断</a></li><li><a href="/asm/dist/asm/function.html" class="sidebar-link">高级函数过程</a></li><li><a href="/asm/dist/asm/float.html" class="sidebar-link">浮点数</a></li><li><a href="/asm/dist/asm/example.html" class="sidebar-link">汇编示例</a></li><li><a href="/asm/dist/ddt/" class="sidebar-link">弹弹堂</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="c-的类"><a href="#c-的类" class="header-anchor">#</a> C++的类</h1> <p></p><div class="table-of-contents"><ul><li><a href="#首先创建room-房子类">首先创建room 房子类</a></li><li><a href="#然后再派生类汤臣一品">然后再派生类汤臣一品</a></li><li><a href="#使用">使用</a></li></ul></div><p></p> <p>关于类与对象的特性即说明不细说,只讲使用。</p> <p>示例不太好:但是设计到大部分类的语法</p> <h2 id="首先创建room-房子类"><a href="#首先创建room-房子类" class="header-anchor">#</a> 首先创建room 房子类</h2> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;string&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression">once</span></span>
+
+using namespace std<span class="token punctuation">;</span>
+class Room
+<span class="token punctuation">{</span>
+	<span class="token comment">//房子的长宽高公开</span>
+public<span class="token operator">:</span>
+	<span class="token keyword">double</span> length<span class="token punctuation">;</span>
+	<span class="token keyword">double</span> width<span class="token punctuation">;</span>
+	<span class="token keyword">double</span> height<span class="token punctuation">;</span>
+	<span class="token comment">//面积													.</span>
+	<span class="token keyword">double</span> <span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">//构造函数</span>
+	<span class="token function">Room</span><span class="token punctuation">(</span><span class="token keyword">double</span> length<span class="token punctuation">,</span><span class="token keyword">double</span> width<span class="token punctuation">,</span><span class="token keyword">double</span> height<span class="token punctuation">,</span> string hourseOwner<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">//介绍 虚拟方法 派生类实现</span>
+	virtual <span class="token keyword">void</span> <span class="token function">introduce</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	
+protected<span class="token operator">:</span>
+	<span class="token comment">//房主私有</span>
+	string houseOwner<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">//后面跟着实现 类的成员使用::符号</span>
+<span class="token keyword">double</span> Room<span class="token operator">::</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">return</span> length<span class="token operator">*</span>width<span class="token operator">*</span>height<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+Room<span class="token operator">::</span><span class="token function">Room</span><span class="token punctuation">(</span><span class="token keyword">double</span> length<span class="token punctuation">,</span> <span class="token keyword">double</span> width<span class="token punctuation">,</span> <span class="token keyword">double</span> height<span class="token punctuation">,</span> string hourseOwner<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	this<span class="token operator">-&gt;</span>height <span class="token operator">=</span> height<span class="token punctuation">;</span>
+	this<span class="token operator">-&gt;</span>length <span class="token operator">=</span> length<span class="token punctuation">;</span>
+	this<span class="token operator">-&gt;</span>width <span class="token operator">=</span> width<span class="token punctuation">;</span>
+	this<span class="token operator">-&gt;</span>houseOwner <span class="token operator">=</span> hourseOwner<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="然后再派生类汤臣一品"><a href="#然后再派生类汤臣一品" class="header-anchor">#</a> 然后再派生类汤臣一品</h2> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">pragma</span> <span class="token expression">once</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Room.h&quot;</span></span>
+class Tomson <span class="token operator">:</span>
+    public Room
+<span class="token punctuation">{</span>
+public<span class="token operator">:</span>
+    <span class="token comment">//实现虚方法</span>
+    <span class="token keyword">void</span> <span class="token function">introduce</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">Tomson</span><span class="token punctuation">(</span><span class="token keyword">double</span> length<span class="token punctuation">,</span> <span class="token keyword">double</span> width<span class="token punctuation">,</span> <span class="token keyword">double</span> height<span class="token punctuation">,</span> string hourseOwner<span class="token punctuation">)</span> <span class="token operator">:</span><span class="token function">Room</span><span class="token punctuation">(</span>length<span class="token punctuation">,</span> width<span class="token punctuation">,</span> height<span class="token punctuation">,</span> hourseOwner<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+
+private<span class="token operator">:</span>
+    <span class="token keyword">double</span> price <span class="token operator">=</span> <span class="token number">99999</span><span class="token punctuation">;</span>
+
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> Tomson<span class="token operator">::</span><span class="token function">introduce</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;汤臣一品就是贵,平方数:&quot;</span><span class="token operator">&lt;&lt;</span> this<span class="token operator">-&gt;</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token string">&quot;价钱:&quot;</span><span class="token operator">&lt;&lt;</span>this<span class="token operator">-&gt;</span>price<span class="token operator">&lt;&lt;</span><span class="token string">&quot;施主:&quot;</span><span class="token operator">&lt;&lt;</span>this<span class="token operator">-&gt;</span>houseOwner <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;Tomson.h&quot;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;xstring&gt;</span></span>
+using namespace std<span class="token punctuation">;</span>
+
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	string name <span class="token operator">=</span> <span class="token string">&quot;zhanghe&quot;</span><span class="token punctuation">;</span>
+	Tomson <span class="token function">room</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	Room <span class="token operator">*</span>rptr <span class="token operator">=</span> <span class="token operator">&amp;</span>room<span class="token punctuation">;</span>
+
+	cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;面积:&quot;</span> <span class="token operator">&lt;&lt;</span> rptr<span class="token operator">-&gt;</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+	rptr<span class="token operator">-&gt;</span><span class="token function">introduce</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/27/2022, 9:34:57 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/asm/dist/cplus/" class="prev router-link-active">
+        c++基础
+      </a></span> <span class="next"><a href="/asm/dist/cplus/cAdvanced.html">
+        C++ 进阶
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/asm/dist/assets/js/app.6634fcdc.js" defer></script><script src="/asm/dist/assets/js/2.c8a9966a.js" defer></script><script src="/asm/dist/assets/js/20.5d3c78e4.js" defer></script>
+  </body>
+</html>
